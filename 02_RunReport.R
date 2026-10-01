@@ -25,8 +25,7 @@
 #      RDBESfile <- c("C:/Data/HCL_2023.zip", "C:/Data/HCE_2023.zip")
 
 RDBESfile <- c(
-  "Data/HCE_2026_03_11_170242047.zip",
-  "Data/HCL_2026_03_11_170145372.zip"
+  "CLdata/HCL.zip","CEdata/HCE.zip"
 )
 
 # -- Optional: Eurostat comparison -------------------------------------------
@@ -53,12 +52,13 @@ fleetRegisterFile <- ""   # e.g. "C:/Data/vesselRegistryListResults.zip"
 # =============================================================================
 
 # -- Locate this script so all relative paths work regardless of working dir --
-script_dir <- if (requireNamespace("rstudioapi", quietly = TRUE) &&
-                    rstudioapi::isAvailable()) {
-  dirname(rstudioapi::getSourceEditorContext()$path)
-} else {
-  getwd()   # fallback when sourced from the command line / non-RStudio session
-}
+# script_dir <- if (requireNamespace("rstudioapi", quietly = TRUE) &&
+#                     rstudioapi::isAvailable()) {
+#   dirname(rstudioapi::getSourceEditorContext()$path)
+# } else {
+#   getwd()   # fallback when sourced from the command line / non-RStudio session
+# }
+script_dir <- getwd() # JC edit: opting for this version
 
 # -- Helper: resolve a path relative to the script directory -----------------
 .rel <- function(p) {

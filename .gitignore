@@ -55,6 +55,7 @@ RDBESQualityReport.Rproj
 MeetingMinutes/WGRDBESGOVQuality_08022024Minutes.docx
 
 # Data 
-Data/
+CLdata/
+CEdata/
 ReportOutput/
 *.zip
